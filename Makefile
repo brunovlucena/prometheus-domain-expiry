@@ -4,7 +4,7 @@ HELPER_CMD = $(filter-out $(firstword $(MAKECMDGOALS)), $(MAKECMDGOALS))
 
 # App Variables
 PORT = 8000
-CLOUDFLAR
+DOMAINS = "example.com"
 # Build Variables
 REPOSITORY = localhost:5000
 BUILD_NAME = prometheus-domain-expiry-exporter
@@ -20,7 +20,7 @@ build: ## builds container
 	@docker build . -t ${REPOSITORY}/${BUILD_NAME}:${RELEASE}
 
 run: ## runs example
-	@PORT=${PORT} go run main.go
+	@PORT=${PORT} DOMAINS=${DOMAINS} go run main.go
 
 test: ## runs tests
 	@go mod tidy

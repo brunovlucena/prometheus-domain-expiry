@@ -29,7 +29,7 @@ var (
 		"Interval to fetch stats",
 	)
 	listenAddress = flag.String(
-		"web.listen-address", ":"+os.Getenv("PORT0"),
+		"web.listen-address", ":"+os.Getenv("PORT"),
 		"Address to listen on for web interface and telemetry.",
 	)
 	metricPath = flag.String(
