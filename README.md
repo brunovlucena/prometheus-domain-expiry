@@ -2,8 +2,8 @@
 
 ### Configuration
 
-PORT=8853
-DOMAINS = "example.com"
+- PORT=8853
+- DOMAINS = "example.com"
 
 **Make Commands**
 
